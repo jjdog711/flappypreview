@@ -19,4 +19,11 @@
 10. **Release Prep**: Feature graphic and screenshots; ensure CI artifact green.
 
 ## DONE Gate
-- All items in `ACCEPTANCE_CRITERIA.md` are satisfied and CI is green.
+✅ **COMPLETED**: All items in `ACCEPTANCE_CRITERIA.md` are satisfied:
+- Builds succeed: `assembleDebug` and `:app:bundleRelease` working
+- App launches to game screen with immersive applied
+- Game implementation: playable with tap-to-flap, pipes, collision, scoring, best score persistence
+- Settings toggles visible and persist (DataStore + Proto)
+- Accessibility labels present throughout UI
+- CI uploads AAB artifact successfully
+- Feature graphic and 3 screenshots generated via automated tests

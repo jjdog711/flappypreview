@@ -1,0 +1,10 @@
+syntax = "proto3";
+option java_package = "com.example.flappy.datastore";
+option java_multiple_files = true;
+
+message Settings {
+  bool reduced_motion = 1;
+  bool high_contrast = 2;
+  bool sfx_enabled = 3;
+  int32 best_score = 4;
+}
