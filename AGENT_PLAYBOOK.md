@@ -1,0 +1,22 @@
+# Agent Playbook — One-Shot Implementation
+
+## Guardrails
+- Stack is locked: Kotlin 1.9.22 / AGP 8.7.2 / Gradle 8.11.1 / JDK 17 / Compose BOM pinned.
+- No engines, no DI frameworks, minimal deps.
+- Fixed-timestep simulation; avoid per-frame allocations; use `remember {}` wisely.
+- Accessibility and DataStore persistence must be implemented.
+
+## Steps
+1. **Game Loop**: Implement fixed-step loop in a `GameEngine` with pause/resume.
+2. **Entities**: Bird, Pipes, Background parallax; preallocate arrays/buffers.
+3. **Collision**: Circle vs rect; clamp and early-out.
+4. **Spawning & Scoring**: RNG with deterministic seed for tests; scoring event channel.
+5. **UI Overlays**: Ready, Pause, GameOver; HUD typography; buttons with content descriptions.
+6. **Settings**: Reduced Motion, High Contrast, SFX on/off; persist with Proto DataStore.
+7. **Audio**: SoundPool for flap/score/hit; preload on start.
+8. **Perf**: Avoid allocations; benchmark frame time; throttle logs.
+9. **Tests**: Unit collision/scoring; instrumented smoke; perf sanity target ≥ 55 FPS emulator.
+10. **Release Prep**: Feature graphic and screenshots; ensure CI artifact green.
+
+## DONE Gate
+- All items in `ACCEPTANCE_CRITERIA.md` are satisfied and CI is green.

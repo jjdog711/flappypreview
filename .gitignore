@@ -1,0 +1,29 @@
+# Gradle
+.gradle/
+build/
+**/build/
+
+# Android Studio
+.local/
+.idea/
+*.iml
+captures/
+
+# Keystore (do not commit real keys)
+*.keystore
+*.jks
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+
+# Misc
+*.tmp

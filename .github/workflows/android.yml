@@ -1,0 +1,25 @@
+name: Android CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - name: Gradle cache
+        uses: gradle/actions/setup-gradle@v3
+      - name: Build Release Bundle
+        run: ./gradlew clean :app:bundleRelease
+      - name: Upload AAB
+        uses: actions/upload-artifact@v4
+        with:
+          name: flappy-preview-aab
+          path: app/build/outputs/bundle/release/*.aab

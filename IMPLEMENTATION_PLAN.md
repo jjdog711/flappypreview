@@ -1,0 +1,12 @@
+# Implementation Plan (Timeboxed)
+
+1. Game Loop & State (0.5d)
+2. Entities & Rendering (0.5d)
+3. Collision & Physics (0.5d)
+4. Spawning & Scoring (0.5d)
+5. UI Overlays & HUD (0.5d)
+6. Settings + DataStore (0.5d)
+7. Audio (0.25d)
+8. Performance polish (0.25d)
+9. Tests (0.5d)
+10. Release packaging & screenshots (0.25d)
