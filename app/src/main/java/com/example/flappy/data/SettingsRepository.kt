@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.map
 
@@ -22,7 +23,7 @@ class SettingsRepository(private val context: Context) {
         sfxEnabled = prefs.getBoolean(KEY_SFX_ENABLED, true),
         bestScore = prefs.getInt(KEY_BEST_SCORE, 0)
     ))
-    val settings: Flow<Settings> = _settings.asStateFlow()
+    val settings: StateFlow<Settings> = _settings.asStateFlow()
 
     val bestScore: Flow<Int> = settings.map { it.bestScore }
 

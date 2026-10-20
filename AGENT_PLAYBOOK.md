@@ -18,8 +18,8 @@
 9. **Tests**: Unit collision/scoring; instrumented smoke; perf sanity target ≥ 55 FPS emulator.
 10. **Release Prep**: Feature graphic and screenshots; ensure CI artifact green.
 
-## DONE Gate
-✅ **COMPLETED**: All items in `ACCEPTANCE_CRITERIA.md` are satisfied:
+## Historical implementation checklist
+The following undated checklist records previously reported implementation status against `ACCEPTANCE_CRITERIA.md`. It does not establish current build, device, or hosted CI results; revalidate the relevant checks for the commit under review.
 - Builds succeed: `assembleDebug` and `:app:bundleRelease` working
 - App launches to game screen with immersive applied
 - Game implementation: playable with tap-to-flap, pipes, collision, scoring, best score persistence
